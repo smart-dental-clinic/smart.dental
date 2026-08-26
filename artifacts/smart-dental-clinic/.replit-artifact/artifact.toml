@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Smart Dental Clinic"
+description = "A welcoming clinic website for Smart Dental Clinic in Amman’s Shafa Badran neighborhood, helping patients explore treatments, meet the clinic, find the location, and request an appointment."
+version = "1.0.0"
+id = "artifacts/smart-dental-clinic"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18293
+
+[services.development]
+run = "pnpm --filter @workspace/smart-dental-clinic run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/smart-dental-clinic", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/smart-dental-clinic/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18293"
+BASE_PATH = "/"
