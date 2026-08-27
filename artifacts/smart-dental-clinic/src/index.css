@@ -120,6 +120,8 @@
 .nav-link { color: hsl(var(--muted-foreground)); text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .02em; transition: color .2s ease; }
 .nav-link:hover { color: hsl(var(--accent)); }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
+.language-toggle { min-width: 63px; padding: 10px 11px; border: 1px solid hsl(var(--primary) / .18); border-radius: 999px; background: transparent; color: hsl(var(--primary)); font-size: 10px; font-weight: 800; cursor: pointer; transition: background-color .25s ease, border-color .25s ease, color .25s ease, transform .25s ease; }
+.language-toggle:hover { border-color: hsl(var(--accent) / .45); background: hsl(var(--accent) / .07); color: hsl(var(--accent)); transform: translateY(-1px); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 999px; padding: 14px 20px; cursor: pointer; text-decoration: none; font-weight: 800; font-size: 11px; letter-spacing: .01em; transition: transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .button:hover { transform: translateY(-2px); }
 .button-small { padding: 12px 16px; }
@@ -132,6 +134,10 @@
 .button-ghost-light { color: hsl(42 38% 97%); border: 1px solid hsl(42 38% 97% / .32); background: hsl(42 38% 97% / .04); }
 .button-ghost-light:hover { border-color: hsl(42 38% 97% / .7); background: hsl(42 38% 97% / .12); }
 .menu-toggle { display: none; border: 0; background: transparent; color: hsl(var(--foreground)); cursor: pointer; }
+.is-rtl { font-family: Tahoma, Arial, sans-serif; }
+.is-rtl .brand-copy { direction: ltr; text-align: left; }
+.is-rtl .display, .is-rtl .service-card h3, .is-rtl .doctor-label strong { font-family: Tahoma, Arial, sans-serif; font-weight: 700; letter-spacing: -.035em; }
+.is-rtl .eyebrow { letter-spacing: .08em; }
 
 .hero { position: relative; min-height: 720px; display: flex; align-items: center; overflow: hidden; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
 .hero-photo { position: absolute; inset: 0; }
