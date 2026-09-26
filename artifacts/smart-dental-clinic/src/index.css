@@ -269,12 +269,15 @@
 .voices-section .section-heading h2 { color: hsl(42 38% 97%); }
 .voices-section .section-heading p { color: hsl(42 38% 97% / .6); }
 .voices-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 47px; }
+.voices-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; justify-content: flex-end; }
 .slider-controls { display: flex; gap: 9px; }
 .slider-button { width: 43px; height: 43px; border: 1px solid hsl(42 38% 97% / .28); background: transparent; color: hsl(42 38% 97%); display: grid; place-items: center; border-radius: 50%; cursor: pointer; transition: background .2s ease, border-color .2s ease; }
 .slider-button:hover { background: hsl(42 38% 97% / .13); border-color: hsl(42 38% 97% / .6); }
 .testimonial-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 65px; align-items: center; }
 .testimonial-index { color: hsl(255 69% 78%); font-family: var(--app-font-serif); font-size: 115px; line-height: .8; }
 .testimonial-side p { max-width: 210px; margin: 24px 0 0; color: hsl(42 38% 97% / .53); font-size: 11px; line-height: 1.6; }
+.testimonial-side .review-help { margin-top: 13px; color: hsl(42 38% 97% / .7); }
+.review-button { white-space: nowrap; padding: 12px 16px; }
 .testimonial-card { position: relative; padding: 44px 49px; min-height: 255px; border-radius: 3px 3px 3px 48px; background: hsl(42 38% 97%); color: hsl(var(--primary)); }
 .testimonial-quote { color: hsl(var(--coral)); font-family: Georgia, serif; font-size: 58px; line-height: .5; }
 .testimonial-text { margin: 22px 0 31px; max-width: 650px; font-family: var(--app-font-serif); font-size: clamp(25px, 3.1vw, 38px); line-height: 1.08; letter-spacing: -.03em; }
