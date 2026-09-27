@@ -233,6 +233,7 @@
 .care-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 100px; align-items: center; }
 .care-copy h2 { margin: 19px 0 18px; color: hsl(var(--primary)); font-size: clamp(43px, 4.6vw, 62px); max-width: 580px; }
 .care-lede { color: hsl(var(--muted-foreground)); line-height: 1.7; margin: 0; font-size: 14px; }
+.care-title-image { display: block; width: min(100%, 470px); height: 220px; margin: 0 0 24px; border-radius: 4px 4px 42px 4px; object-fit: cover; object-position: center 52%; box-shadow: 0 18px 40px hsl(var(--primary) / .12); }
 .care-steps { margin-top: 37px; border-top: 1px solid hsl(var(--primary) / .18); }
 .care-step { display: grid; grid-template-columns: 43px 1fr; gap: 15px; padding: 22px 0; border-bottom: 1px solid hsl(var(--primary) / .18); }
 .step-no { color: hsl(var(--coral)); font-family: var(--app-font-serif); font-size: 22px; }
