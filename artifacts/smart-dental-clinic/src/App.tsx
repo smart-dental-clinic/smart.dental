@@ -30,6 +30,7 @@ type Language = 'en' | 'ar';
 type Localized = { en: string; ar: string };
 type Service = { id: string; title: Localized; description: Localized; icon: typeof Stethoscope };
 type Testimonial = { quote: Localized; name: string; detail: Localized };
+type SlideDirection = 'next' | 'previous';
 
 const services: Service[] = [
   { id: 'comprehensive', title: { en: 'Comprehensive dental care', ar: 'رعاية أسنان شاملة' }, description: { en: 'Thoughtful check-ups, prevention, and a clear plan for your long-term oral health.', ar: 'فحوصات دقيقة ووقاية وخطة واضحة للحفاظ على صحة فمك على المدى الطويل.' }, icon: Stethoscope },
@@ -129,6 +130,7 @@ function App() {
   const [serviceChoice, setServiceChoice] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [testimonialDirection, setTestimonialDirection] = useState<SlideDirection>('next');
   const [formError, setFormError] = useState('');
   const [form, setForm] = useState({ name: '', phone: '', service: '', day: '', message: '' });
   const c = content[language];
@@ -157,6 +159,13 @@ function App() {
     setServiceChoice(id);
     updateField('service', id);
     scrollToId('appointment');
+  };
+
+  const changeTestimonial = (direction: SlideDirection) => {
+    setTestimonialDirection(direction);
+    setTestimonialIndex((current) => direction === 'next'
+      ? (current + 1) % testimonials.length
+      : (current - 1 + testimonials.length) % testimonials.length);
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -243,7 +252,7 @@ function App() {
         </section>
 
         <section className="section voices-section">
-           <div className="container"><div ref={voicesRef} className="voices-head reveal"><div className="section-heading"><span className="eyebrow">{c.voices.eyebrow}</span><h2 className="display">{c.voices.title}</h2><p>{c.voices.body}</p></div><div className="voices-actions"><a className="button button-accent review-button" href={reviewHref} target="_blank" rel="noreferrer" data-testid="link-leave-review"><MessageCircle size={15} /> {c.voices.reviewButton}</a><div className="slider-controls"><button className="slider-button" aria-label={c.voices.previous} onClick={() => setTestimonialIndex((current) => (current - 1 + testimonials.length) % testimonials.length)} data-testid="button-testimonial-previous"><ChevronLeft size={18} /></button><button className="slider-button" aria-label={c.voices.next} onClick={() => setTestimonialIndex((current) => (current + 1) % testimonials.length)} data-testid="button-testimonial-next"><ChevronRight size={18} /></button></div></div></div><div className="testimonial-layout"><div className="testimonial-side"><span className="testimonial-index" data-testid="text-testimonial-index">0{testimonialIndex + 1}</span><p>{c.voices.side}</p><p className="review-help">{c.voices.reviewHelp}</p></div><article className="testimonial-card reveal delay-1" data-testid={`card-testimonial-${testimonialIndex}`}><div className="testimonial-quote">“</div><p className="testimonial-text">{currentTestimonial.quote[language]}</p><div className="testimonial-person"><div><strong>{currentTestimonial.name}</strong><span>{currentTestimonial.detail[language]}</span></div><span className="stars" aria-label={c.voices.stars}>★★★★★</span></div></article></div></div>
+           <div className="container"><div ref={voicesRef} className="voices-head reveal"><div className="section-heading"><span className="eyebrow">{c.voices.eyebrow}</span><h2 className="display">{c.voices.title}</h2><p>{c.voices.body}</p></div><div className="voices-actions"><a className="button button-accent review-button" href={reviewHref} target="_blank" rel="noreferrer" data-testid="link-leave-review"><MessageCircle size={15} /> {c.voices.reviewButton}</a><div className="slider-controls"><button className="slider-button" aria-label={c.voices.previous} onClick={() => changeTestimonial('previous')} data-testid="button-testimonial-previous"><ChevronLeft size={18} /></button><button className="slider-button" aria-label={c.voices.next} onClick={() => changeTestimonial('next')} data-testid="button-testimonial-next"><ChevronRight size={18} /></button></div></div></div><div className="testimonial-layout"><div className="testimonial-side"><span key={testimonialIndex} className={`testimonial-index testimonial-index-${testimonialDirection}`} data-testid="text-testimonial-index">0{testimonialIndex + 1}</span><p>{c.voices.side}</p><p className="review-help">{c.voices.reviewHelp}</p></div><article key={testimonialIndex} className={`testimonial-card testimonial-slide-${testimonialDirection}`} data-testid={`card-testimonial-${testimonialIndex}`}><div className="testimonial-quote">“</div><p className="testimonial-text">{currentTestimonial.quote[language]}</p><div className="testimonial-person"><div><strong>{currentTestimonial.name}</strong><span>{currentTestimonial.detail[language]}</span></div><span className="stars" aria-label={c.voices.stars}>★★★★★</span></div></article></div></div>
         </section>
 
         <section className="section visit-section" id="visit">
