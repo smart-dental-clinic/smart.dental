@@ -202,7 +202,7 @@
 .gallery-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
 .gallery-image:hover img { transform: scale(1.045); }
 .gallery-large { grid-row: span 2; border-radius: 4px 4px 4px 58px; }
-.gallery-large img { object-position: 48% center; }
+.gallery-large img { object-position: 32% center; }
 .gallery-tall { grid-row: span 2; border-radius: 4px; }
 .gallery-tall img { object-position: 59% center; }
 .gallery-small { border-radius: 4px 4px 56px 4px; }
