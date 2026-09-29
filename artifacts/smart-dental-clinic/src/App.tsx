@@ -70,7 +70,7 @@ const content = {
     doctor: { eyebrow: 'The person behind the care', title: <>A dentist who <span>remembers.</span></>, body: 'Dr. Suhaib believes a good dental visit is a partnership. He brings a careful clinical eye, a light touch, and the kind of patience that helps children open up and adults ask the questions they usually hold back.', credentials: ['Member of the Jordanian Dental Implant Organisation', 'Family care focused', 'Arabic & English'], button: 'Meet Dr. Suhaib' },
      voices: { eyebrow: 'From our patients', title: 'Patient reviews.', body: 'Trust is built one comfortable appointment at a time.', side: 'Real words from patients who trusted us with their care.', reviewButton: 'Leave a review', reviewHelp: 'Share your experience on our Google Business Profile.', previous: 'Previous patient review', next: 'Next patient review', stars: '5 out of 5 stars' },
      visit: { eyebrow: 'Find your way here', title: 'Your neighborhood dentist, right in Shafa Badran.', body: 'Easy to find, easy to reach, and close to home. We are in Al Ittifaq Complex on Al Arrab Street.', location: 'Exact location', address: <>Al Arrab Street, Al Ittifaq Complex<br />Shafa Badran, Amman, Jordan</>, hours: 'Clinic hours', hoursValue: <>Saturday–Thursday · 10:00 am–5:00 pm<br />Friday · Holiday</>, phone: 'Call the clinic', whatsapp: 'Message us on WhatsApp', maps: 'Open in maps', close: 'You are close.' },
-    appointment: { eyebrow: 'Take the first step', title: <>Your smile has a place <em>here.</em></>, body: 'Tell us a little about what you need. Our team will call to find a time that works for you — usually within one working day.', aside: 'Welcome to our clinic. We look forward to meeting you.', formKicker: 'REQUEST A VISIT', formIntro: 'We will be in touch personally.', name: 'Your name', namePlaceholder: 'e.g. Dana Al-Hadidi', phone: 'Phone number', phonePlaceholder: '07 9xxx xxxx', service: 'What can we help with?', servicePlaceholder: 'Choose a service', day: 'Preferred day', dayPlaceholder: 'Choose a day', message: 'Anything you would like us to know?', optional: '(optional)', messagePlaceholder: 'A little context helps us prepare for you.', privacy: 'Your details stay with our clinic team and are only used to arrange your visit.', submit: 'Request my appointment', error: 'Please add your name and a phone number so we can reach you.', success: 'Thank you,', successBody: 'Your request is with our team. We will call', confirm: 'to confirm a suitable time.', another: 'Send another request' },
+     appointment: { eyebrow: 'Take the first step', title: <>Your smile has a place <em>here.</em></>, body: 'Tell us a little about what you need. Press Send in WhatsApp and our team will follow up to find a time that works for you.', aside: 'Welcome to our clinic. We look forward to meeting you.', formKicker: 'REQUEST A VISIT', formIntro: 'Send your details directly on WhatsApp.', name: 'Your name', namePlaceholder: 'e.g. Dana Al-Hadidi', phone: 'Phone number', phonePlaceholder: '07 9xxx xxxx', service: 'What can we help with?', servicePlaceholder: 'Choose a service', day: 'Preferred day', dayPlaceholder: 'Choose a day', message: 'Anything you would like us to know?', optional: '(optional)', messagePlaceholder: 'A little context helps us prepare for you.', privacy: 'Your details stay with our clinic team and are only used to arrange your visit.', submit: 'Request my appointment', error: 'Please add your name and a phone number so we can reach you.', success: 'WhatsApp is ready for', successBody: 'Your request is prepared with the number', confirm: 'Press Send in WhatsApp to deliver it to our team.', another: 'Send another request' },
      footer: { blurb: 'Thoughtful dental care for the people and families of Amman.', explore: 'Explore', clinic: 'The clinic', services: 'Our services', dentist: 'Your dentist', visit: 'Visit', location: 'Location & hours', appointment: 'Request a visit', phone: 'Call +962 7 7975 7377', whatsapp: 'WhatsApp us', details: 'Clinic details', hours: 'Sat–Thu · 10 am–5 pm · Friday holiday', call: 'Call', book: 'Book a visit', find: 'Find us', copyright: '© 2024 Smart Dental Clinic · Amman, Jordan' },
   },
   ar: {
@@ -86,7 +86,7 @@ const content = {
     doctor: { eyebrow: 'الشخص خلف هذه الرعاية', title: <>طبيب أسنان <span>يتذكرك.</span></>, body: 'يؤمن الدكتور صهيب بأن زيارة الأسنان الجيدة هي شراكة. يجمع بين النظرة السريرية الدقيقة واللمسة اللطيفة والصبر الذي يساعد الأطفال على الانفتاح ويشجع الكبار على طرح أسئلتهم.', credentials: ['عضو في المنظمة الأردنية لزراعة الأسنان', 'رعاية متخصصة للعائلات', 'العربية والإنجليزية'], button: 'تعرّف على د. صهيب' },
      voices: { eyebrow: 'من مرضانا', title: 'تقييمات المرضى.', body: 'الثقة تُبنى مع كل زيارة مريحة.', side: 'كلمات حقيقية من مرضى وثقوا بنا في رعايتهم.', reviewButton: 'أضف تقييمك', reviewHelp: 'شارك تجربتك على صفحة العيادة في Google.', previous: 'تقييم المريض السابق', next: 'تقييم المريض التالي', stars: '5 من 5 نجوم' },
      visit: { eyebrow: 'كيف تصل إلينا', title: 'طبيب أسنان قريب منك في شفا بدران.', body: 'الوصول إلينا سهل وقريب من منزلك. نحن في مجمع الاتفاق على شارع العراب.', location: 'الموقع بالتفصيل', address: <>شارع العراب، مجمع الاتفاق<br />شفا بدران، عمّان، الأردن</>, hours: 'ساعات العيادة', hoursValue: <>السبت–الخميس · 10:00 صباحاً–5:00 مساءً<br />الجمعة · عطلة</>, phone: 'اتصل بالعيادة', whatsapp: 'راسلنا عبر واتساب', maps: 'افتح الموقع على الخريطة', close: 'أنت قريب' },
-    appointment: { eyebrow: 'خذ الخطوة الأولى', title: <>ابتسامتك لها مكان <em>هنا.</em></>, body: 'أخبرنا قليلاً بما تحتاجه. سيتصل بك فريقنا للعثور على وقت مناسب لك — عادة خلال يوم عمل واحد.', aside: 'أهلاً بكم في عيادتنا. نتطلع إلى لقائكم.', formKicker: 'احجز زيارة', formIntro: 'سنتواصل معك شخصياً.', name: 'الاسم', namePlaceholder: 'مثال: دانا الحديدي', phone: 'رقم الهاتف', phonePlaceholder: '07 9xxx xxxx', service: 'كيف يمكننا مساعدتك؟', servicePlaceholder: 'اختر الخدمة', day: 'اليوم المفضل', dayPlaceholder: 'اختر اليوم', message: 'هل تود إخبارنا بأي شيء؟', optional: '(اختياري)', messagePlaceholder: 'أي تفاصيل تساعدنا على الاستعداد لزيارتك.', privacy: 'تبقى بياناتك مع فريق العيادة وتُستخدم فقط لترتيب زيارتك.', submit: 'إرسال طلب الموعد', error: 'يرجى إضافة اسمك ورقم هاتف حتى نتمكن من التواصل معك.', success: 'شكراً لك،', successBody: 'تم استلام طلبك. سيتصل بك فريقنا على الرقم', confirm: 'لتأكيد الوقت المناسب.', another: 'إرسال طلب آخر' },
+     appointment: { eyebrow: 'خذ الخطوة الأولى', title: <>ابتسامتك لها مكان <em>هنا.</em></>, body: 'أخبرنا قليلاً بما تحتاجه. اضغط إرسال في واتساب وسيتابع فريقنا معك للعثور على وقت مناسب لك.', aside: 'أهلاً بكم في عيادتنا. نتطلع إلى لقائكم.', formKicker: 'احجز زيارة', formIntro: 'أرسل تفاصيلك مباشرة عبر واتساب.', name: 'الاسم', namePlaceholder: 'مثال: دانا الحديدي', phone: 'رقم الهاتف', phonePlaceholder: '07 9xxx xxxx', service: 'كيف يمكننا مساعدتك؟', servicePlaceholder: 'اختر الخدمة', day: 'اليوم المفضل', dayPlaceholder: 'اختر اليوم', message: 'هل تود إخبارنا بأي شيء؟', optional: '(اختياري)', messagePlaceholder: 'أي تفاصيل تساعدنا على الاستعداد لزيارتك.', privacy: 'تبقى بياناتك مع فريق العيادة وتُستخدم فقط لترتيب زيارتك.', submit: 'إرسال طلب الموعد', error: 'يرجى إضافة اسمك ورقم هاتف حتى نتمكن من التواصل معك.', success: 'واتساب جاهز لـ', successBody: 'تم تجهيز طلبك بالرقم', confirm: 'اضغط إرسال في واتساب لإيصاله إلى فريقنا.', another: 'إرسال طلب آخر' },
      footer: { blurb: 'رعاية أسنان مدروسة لأهل وعائلات عمّان.', explore: 'استكشف', clinic: 'العيادة', services: 'خدماتنا', dentist: 'طبيبك', visit: 'زيارة', location: 'الموقع والساعات', appointment: 'احجز زيارة', phone: 'اتصل +962 7 7975 7377', whatsapp: 'واتساب', details: 'تفاصيل العيادة', hours: 'السبت–الخميس · 10 صباحاً–5 مساءً · الجمعة عطلة', call: 'اتصل', book: 'احجز زيارة', find: 'موقعنا', copyright: '© 2024 Smart Dental Clinic · عمّان، الأردن' },
   },
 } as const;
@@ -143,7 +143,8 @@ function App() {
   const voicesRef = useReveal();
   const visitRef = useReveal();
   const appointmentRef = useReveal();
-  const reviewHref = 'https://g.page/r/CcammFOyLSh2EAI/review';
+   const reviewHref = 'https://g.page/r/CcammFOyLSh2EAI/review';
+   const clinicWhatsAppNumber = '962779757377';
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -189,7 +190,22 @@ function App() {
       setFormError(c.appointment.error);
       return;
     }
+    const selectedService = services.find((service) => service.id === form.service);
+    const selectedDay = days.find((day) => day.value === form.day);
+    const labels = isArabic
+      ? { title: 'طلب زيارة جديد — سمارت دينتال', name: 'الاسم', phone: 'رقم الهاتف', service: 'الخدمة', day: 'اليوم المفضل', notes: 'ملاحظات' }
+      : { title: 'New visit request — Smart Dental Clinic', name: 'Name', phone: 'Phone', service: 'Service', day: 'Preferred day', notes: 'Notes' };
+    const whatsappMessage = [
+      labels.title,
+      `${labels.name}: ${form.name.trim()}`,
+      `${labels.phone}: ${form.phone.trim()}`,
+      `${labels.service}: ${selectedService?.title[language] ?? (isArabic ? 'غير محدد' : 'Not specified')}`,
+      `${labels.day}: ${selectedDay?.[language] ?? (isArabic ? 'غير محدد' : 'Not specified')}`,
+      `${labels.notes}: ${form.message.trim() || (isArabic ? 'لا توجد' : 'None')}`,
+    ].join('\n');
+    const whatsappUrl = `https://wa.me/${clinicWhatsAppNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     setFormError('');
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     setSubmitted(true);
   };
 
