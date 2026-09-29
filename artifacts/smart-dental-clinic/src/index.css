@@ -396,8 +396,9 @@
   .gallery-section { padding: 78px 0 84px; }
   .gallery-heading { align-items: start; flex-direction: column; gap: 22px; margin-bottom: 31px; }
   .gallery-heading h2 { font-size: 51px; }
-  .gallery-grid { width: calc(100% - 32px); grid-template-columns: 1fr 1fr; grid-template-rows: 260px 190px; gap: 10px; }
-  .gallery-large { grid-row: span 2; }
+  .gallery-grid { width: calc(100% - 32px); grid-template-columns: 1fr 1fr; grid-template-rows: 275px 190px; gap: 10px; }
+  .gallery-large { grid-column: 1 / -1; grid-row: auto; border-radius: 4px 4px 4px 42px; }
+  .gallery-large img { object-position: 50% center; }
   .gallery-tall { grid-row: auto; }
   .gallery-small { grid-column: span 1; }
   .services-section { padding-top: 81px; }
