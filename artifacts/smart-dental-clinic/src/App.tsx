@@ -150,6 +150,21 @@ function App() {
     document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
   }, [language, isArabic]);
 
+  useEffect(() => {
+    const revealNodes = Array.from(document.querySelectorAll<HTMLElement>('.reveal'));
+    if (!revealNodes.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px 180px 0px' });
+    revealNodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, []);
+
   const updateField = (field: keyof typeof form, value: string) => {
     setForm((current) => ({ ...current, [field]: value }));
     if (field === 'name' || field === 'phone') setFormError('');
