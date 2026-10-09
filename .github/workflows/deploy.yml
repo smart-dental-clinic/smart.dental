@@ -40,7 +40,7 @@ jobs:
        
         run: pnpm run build
       - name: Inspect output folder
-        run: ls -R dist || ls -la
+        run: find . -maxdepth 2 -not -path "*/node_modules/*"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
